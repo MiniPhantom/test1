@@ -31,9 +31,10 @@ class Image extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.text !== this.props.text) {
+    if (prevProps.text !== this.props.text) {
       this.fetch();
-    }
+    } else {
+    this.prevProps.text = '23456789876'}
   }
 
   render() {
